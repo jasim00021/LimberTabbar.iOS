@@ -22,6 +22,14 @@ public class AHLimberTabbar : UITabBar {
     var safeViewInsetsObserver : NSKeyValueObservation?
     var itemObserver : NSKeyValueObservation?
     
+     public var defultSelect : Int = 0 {
+        
+        didSet {
+
+            self.selectedTab = self.tabs[defultSelect]
+            print("defultSelect",defultSelect)
+        }
+    }
     /**
      Since both background and bar tint colors will be null, this variable will capture the color on initialization.
     */
